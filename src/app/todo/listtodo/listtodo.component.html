@@ -1,0 +1,20 @@
+
+<table >
+  <tr>
+    <th>title</th>
+    <th>etat</th>
+    <th>make to do completed/uncompleted</th>
+  </tr>
+
+  <tr *ngFor="let todo of todoslist">
+    <td>{{todo.title}}</td>
+    <td>{{todo.completed?'completed':'uncompleted'}}</td>
+    <td>
+      <button (click)="changevalue(todo.id,todo.completed)">completed</button>
+      <button (click)="changevalue(todo.id,todo.completed)">uncompleted</button>
+    </td>
+    <td><button>delete</button></td>
+  </tr>
+
+</table>
+<button routerLink="createtodo">create to do</button>

@@ -1,0 +1,9 @@
+<div class="singup">
+  <form [formGroup]="formgroup"  (ngSubmit)="submit()">
+    <input type="text" placeholder="name" formControlName="name"/>
+    <input type="email" placeholder="email" formControlName="email"/>
+    <input type="password" placeholder="passowrd" formControlName="password"/>
+    <button type="submit" >Singup</button>
+  </form>
+  <button routerLink="/">go to login</button>
+</div>
